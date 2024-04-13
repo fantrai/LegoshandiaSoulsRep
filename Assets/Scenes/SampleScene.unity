@@ -446,6 +446,12 @@ MonoBehaviour:
   movementSpeed: 0.1
   joystick: {fileID: 2115055393}
   hpRegenerationPerSecond: 1
+  critChance: 0
+  modCriticalDamage: 2
+  chanceEvasion: 90
+  modMagicSize: 1
+  modSpellDuration: 1
+  modAddMana: 1
 --- !u!50 &1471149557
 Rigidbody2D:
   serializedVersion: 4
