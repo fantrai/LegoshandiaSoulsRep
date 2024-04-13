@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Authentication.ExtendedProtection;
 using UnityEngine;
 
 public abstract class AbstractEntity : MonoBehaviour
 {
     [SerializeField] float hp;
+    protected float maxHP;
     public float HP 
     {
         get { return hp; }
         set
         {
             hp = value; 
+            if (hp > maxHP)
+            {
+                hp = maxHP;
+            }
             if (hp <= 0)
             {
                 Dead();
@@ -60,9 +66,19 @@ public abstract class AbstractEntity : MonoBehaviour
         }
     }
 
+    protected virtual void Start()
+    {
+        maxHP = hp;
+    }
+
     protected virtual void FixedUpdate()
     {
         Movement();
+    }
+
+    public void TakeDamage(float damage)
+    {
+        HP -= damage;
     }
 
     protected abstract void Movement();
@@ -70,5 +86,13 @@ public abstract class AbstractEntity : MonoBehaviour
     protected virtual void Dead()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out AbstractEntity ent))
+        {
+            ent.TakeDamage(baseDamage * attackSpeed * Time.fixedDeltaTime);
+        }
     }
 }
