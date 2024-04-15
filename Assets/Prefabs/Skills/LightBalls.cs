@@ -23,6 +23,26 @@ public class LightBalls : AbstractSkill
 
     protected override void EffectOnNewLvl()
     {
-        addDamage += 1;
+        switch (Lvl)
+        {
+            case 2:
+                countBallInAttack += 2;
+                break;
+            case 3:
+                countBallInAttack += 2;
+                break;
+            case 4:
+                modDamage += 0.2f;
+                break;
+            case 5:
+                modSize *= 2;
+                break;
+            case 6:
+                countBallInAttack += 3;
+                break;
+            case 7:
+                modDamage += 0.2f;
+                break;
+        }
     }
 }

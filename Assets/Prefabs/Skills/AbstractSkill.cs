@@ -8,14 +8,15 @@ public abstract class AbstractSkill : MonoBehaviour
 {
     public static Action EndCast;
 
-    public int MaxLvl { get => maxLvl; }
+    public int MaxLvl { get => descriptionsOnLvls.Length; }
     public int Lvl { get => lvl; }
+
     [SerializeField] protected float modDamage = 1;
     [SerializeField] protected float addDamage = 0;
     [SerializeField] protected float modSize = 1;
     [SerializeField] protected float cooldown;
-    [SerializeField] int maxLvl = 0;
     [SerializeField] string[] descriptionsOnLvls;
+    [SerializeField] string nameSkill;
     [SerializeField] protected CircleCollider2D rangeAttack;
     [SerializeField] Image ico;
     protected List<AbstractEntity> enemiesInRangeAttack = new List<AbstractEntity>();
@@ -52,7 +53,7 @@ public abstract class AbstractSkill : MonoBehaviour
 
     public void PrintPan(SkillPan pan)
     {
-        pan.UpdatePan(ico, descriptionsOnLvls[lvl]);
+        pan.UpdatePan(ico, descriptionsOnLvls[lvl], nameSkill);
     }
 
     public void StartCast(Player player)

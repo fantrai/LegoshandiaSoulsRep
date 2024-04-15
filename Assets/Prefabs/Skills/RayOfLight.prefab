@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1217826064702205867
+--- !u!1 &3553481732542597783
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3590691269524667976}
-  - component: {fileID: 6263700139417975638}
-  - component: {fileID: -9105078226818417747}
-  - component: {fileID: 668559699136983967}
+  - component: {fileID: 5684698428109336335}
+  - component: {fileID: 5462337403983522609}
+  - component: {fileID: 8148866618711120889}
+  - component: {fileID: 6472455692467027392}
   m_Layer: 9
-  m_Name: LightBalls
+  m_Name: RayOfLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3590691269524667976
+--- !u!4 &5684698428109336335
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217826064702205867}
+  m_GameObject: {fileID: 3553481732542597783}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -34,13 +34,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &6263700139417975638
+--- !u!58 &5462337403983522609
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217826064702205867}
+  m_GameObject: {fileID: 3553481732542597783}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -64,21 +64,21 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 8
---- !u!50 &-9105078226818417747
+  m_Radius: 0.5
+--- !u!50 &8148866618711120889
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217826064702205867}
-  m_BodyType: 1
+  m_GameObject: {fileID: 3553481732542597783}
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -96,32 +96,35 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &668559699136983967
+  m_Constraints: 7
+--- !u!114 &6472455692467027392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217826064702205867}
+  m_GameObject: {fileID: 3553481732542597783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f24aa07781e104086dd163f5d6f701, type: 3}
+  m_Script: {fileID: 11500000, guid: b8507c175c688184980c68cfaabc0da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modDamage: 3.3
+  modDamage: 1
   addDamage: 0
   modSize: 1
-  cooldown: 0.75
-  maxLvl: 5
+  cooldown: 12
   descriptionsOnLvls:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  rangeAttack: {fileID: 6263700139417975638}
+  - " \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u043B\u0443\u0447\u0430,
+    \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u043F\u0435\u0440\u0435\u0441\u0435\u043A\u0430\u0435\u0442
+    \u043F\u043E\u043B\u0435 \u0432 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438
+    \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u044F \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430,
+    \u043D\u0430\u043D\u043E\u0441\u044F \u0443\u0440\u043E\u043D \u0432\u0440\u0430\u0433\u0430\u043C"
+  - "+1 \u0432\u044B\u043F\u0443\u0441\u043A\u0430\u0435\u043C\u044B\u0439 \u043B\u0443\u0447"
+  - "+30% \u0443\u0440\u043E\u043D\u0430"
+  - "-20% \u043F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0438"
+  - "+20% \u0443\u0440\u043E\u043D\u0430"
+  nameSkill: "\u041B\u0443\u0447 \u0441\u0432\u0435\u0442\u0430"
+  rangeAttack: {fileID: 5462337403983522609}
   ico: {fileID: 0}
-  lightBallPrefab: {fileID: 8036245976295605412, guid: a6a288cd12b70be49a3bc10f5915aebb, type: 3}
-  piercing: 0
-  countBallInAttack: 1
+  lightning: {fileID: 685275317892572452, guid: 44fd631eb0e995d4a837a645762f72ba, type: 3}
+  countLightningInAttack: 1

@@ -97,7 +97,12 @@ public class Player : AbstractEntity
 
     override protected void Movement()
     {
-        playerObj.transform.Translate(joystick.Direction * MovementSpeed);
+        playerObj.transform.Translate(new Vector2(joystick.Horizontal, joystick.Vertical) * MovementSpeed, Space.World);
+        if (joystick.Direction != Vector2.zero)
+        {
+            var angle = Mathf.Atan2(joystick.Vertical, joystick.Horizontal) * Mathf.Rad2Deg;
+            playerObj.transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
 
     IEnumerator Regeneration()

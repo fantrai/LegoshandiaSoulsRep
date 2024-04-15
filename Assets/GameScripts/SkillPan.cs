@@ -8,10 +8,12 @@ public class SkillPan : MonoBehaviour
 {
     [SerializeField] Image ico;
     [SerializeField] TextMeshProUGUI description;
+    [SerializeField] TextMeshProUGUI nameSkillText;
 
-    public void UpdatePan(Image newIco, string newDescription)
+    public void UpdatePan(Image newIco, string newDescription, string nameSkill)
     {
         ico = newIco;
         description.text = newDescription;
+        nameSkillText.text = nameSkill;
     }
 }

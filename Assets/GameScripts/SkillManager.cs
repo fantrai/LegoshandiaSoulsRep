@@ -19,6 +19,7 @@ public class SkillManager : MonoBehaviour
             availableSkills.Add(allSkills[i].GetComponent<AbstractSkill>());
         }
         player.AddNewSkill(allSkills[0]);
+        allSkills[0].GetComponent<AbstractSkill>().NewLvl();
     }
 
     private void OnEnable()

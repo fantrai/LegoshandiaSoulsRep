@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyManger : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] int enemyPerSecond;
+    [SerializeField] int[] countEnemyPerSecondInWawe;
     [SerializeField] GameObject[] enemyPrefab;
     [SerializeField] float[] timerNewWave;
     int wave = 0;
@@ -30,14 +30,14 @@ public class EnemyManger : MonoBehaviour
             float x = radScreen * MathF.Cos(degree);
             float y = radScreen * MathF.Sin(degree);
 
-            Vector2 spawnPos = new Vector3(x, y, 0) + transform.position;
+            Vector2 spawnPos = new Vector3(x, y, 0) + player.transform.position;
 
             Instantiate(enemyPrefab[wave], spawnPos, enemyPrefab[wave].transform.rotation);
 
-            float time = 1f / enemyPerSecond;
+            float time = 1f / countEnemyPerSecondInWawe[wave];
             gameTime += time;
             yield return new WaitForSeconds(time);
-            if (gameTime >= timerNewWave[wave] && wave < timerNewWave.Length - 1)
+            if (gameTime >= timerNewWave[wave] && wave < timerNewWave.Length)
             {
                 wave++;
             }
