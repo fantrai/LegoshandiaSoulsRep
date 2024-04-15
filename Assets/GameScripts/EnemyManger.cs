@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyManger : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] int[] countEnemyPerSecondInWawe;
+    [SerializeField] float[] countEnemyPerSecondInWawe;
     [SerializeField] GameObject[] enemyPrefab;
     [SerializeField] float[] timerNewWave;
     int wave = 0;
