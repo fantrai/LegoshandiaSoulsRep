@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Player : AbstractEntity
 {
     public static Action onNewLvl;
+    public static Action onDead;
 
     public float Exp {
         get 
@@ -65,6 +66,13 @@ public class Player : AbstractEntity
     public float ModSpellDuration { get => modSpellDuration; }
     public float ModMagicCooldown { get => modMagicCooldown; }
 
+    protected override void Dead()
+    {
+        isLive = false;
+        AbstractSkill.EndCast();
+        onDead();
+    }
+
     protected override void Awake()
     {
         base.Awake();
@@ -97,11 +105,14 @@ public class Player : AbstractEntity
 
     override protected void Movement()
     {
-        playerObj.transform.Translate(new Vector2(joystick.Horizontal, joystick.Vertical) * MovementSpeed, Space.World);
-        if (joystick.Direction != Vector2.zero)
+        if (isLive)
         {
-            var angle = Mathf.Atan2(joystick.Vertical, joystick.Horizontal) * Mathf.Rad2Deg;
-            playerObj.transform.rotation = Quaternion.Euler(0, 0, angle);
+            playerObj.transform.Translate(new Vector2(joystick.Horizontal, joystick.Vertical) * MovementSpeed, Space.World);
+            if (joystick.Direction != Vector2.zero)
+            {
+                var angle = Mathf.Atan2(joystick.Vertical, joystick.Horizontal) * Mathf.Rad2Deg;
+                playerObj.transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
         }
     }
 

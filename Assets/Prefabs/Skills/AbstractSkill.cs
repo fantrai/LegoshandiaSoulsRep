@@ -22,7 +22,7 @@ public abstract class AbstractSkill : MonoBehaviour
     protected List<AbstractEntity> enemiesInRangeAttack = new List<AbstractEntity>();
     float baseRangeAttack;
     int lvl = 0;
-    Player player;
+    protected Player player;
 
     private void Awake()
     {
