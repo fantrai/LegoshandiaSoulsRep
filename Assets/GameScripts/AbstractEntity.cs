@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Security.Authentication.ExtendedProtection;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public abstract class AbstractEntity : MonoBehaviour
 {
@@ -38,16 +42,16 @@ public abstract class AbstractEntity : MonoBehaviour
         }
     }
 
-    [SerializeField] float attackSpeed;
+    [SerializeField] float touchAttackSpeed;
     public float AttackSpeed
     {
-        get { return attackSpeed; }
+        get { return touchAttackSpeed; }
         set
         {
-            attackSpeed = value;
-            if (attackSpeed <= 0)
+            touchAttackSpeed = value;
+            if (touchAttackSpeed <= 0)
             {
-                attackSpeed = 0;
+                touchAttackSpeed = 0;
             }
         }
     }
@@ -66,9 +70,12 @@ public abstract class AbstractEntity : MonoBehaviour
         }
     }
 
-    protected virtual void Start()
+    List<AbstractEntity> touchEnemies = new List<AbstractEntity>();
+
+    protected virtual void Awake()
     {
         maxHP = hp;
+        StartCoroutine(TouchDamager());
     }
 
     protected virtual void FixedUpdate()
@@ -76,7 +83,7 @@ public abstract class AbstractEntity : MonoBehaviour
         Movement();
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         HP -= damage;
     }
@@ -88,11 +95,41 @@ public abstract class AbstractEntity : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out AbstractEntity ent))
         {
-            ent.TakeDamage(baseDamage * attackSpeed * Time.fixedDeltaTime);
+            touchEnemies.Add(ent);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out AbstractEntity ent))
+        {
+            if (touchEnemies.Contains(ent))
+            {
+                touchEnemies.Remove(ent);
+            }
+        }
+    }
+
+    IEnumerator TouchDamager()
+    {
+        do
+        {
+            for (int i = 0; i < touchEnemies.Count; i++)
+            {
+                if (touchEnemies[i] != null)
+                {
+                    touchEnemies[i].TakeDamage(BaseDamage);
+                }
+                else
+                {
+                    touchEnemies.Remove(touchEnemies[i]);
+                }
+            }
+            yield return new WaitForSeconds(1 / touchAttackSpeed);
+        } while (true);
     }
 }
