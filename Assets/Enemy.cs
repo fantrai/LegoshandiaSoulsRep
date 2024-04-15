@@ -5,6 +5,13 @@ using UnityEngine;
 public class Enemy : AbstractEntity
 {
     public static GameObject tarfet;
+    [SerializeField] GameObject expSpherePrefab;
+
+    protected override void Dead()
+    {
+        Instantiate(expSpherePrefab, transform.position, expSpherePrefab.transform.rotation);
+        base.Dead();
+    }
 
     protected override void Movement()
     {

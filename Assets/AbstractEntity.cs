@@ -72,7 +72,7 @@ public abstract class AbstractEntity : MonoBehaviour
 
     List<AbstractEntity> touchEnemies = new List<AbstractEntity>();
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         maxHP = hp;
         StartCoroutine(TouchDamager());
@@ -95,7 +95,7 @@ public abstract class AbstractEntity : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out AbstractEntity ent))
         {
