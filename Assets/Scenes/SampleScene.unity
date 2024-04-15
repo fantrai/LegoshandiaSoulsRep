@@ -1135,7 +1135,7 @@ MonoBehaviour:
   critChance: 0
   modCriticalDamage: 2
   chanceEvasion: 100
-  modMagicSize: 10
+  modMagicSize: 1
   modSpellDuration: 1
   modAddMana: 1
   modMagicCooldown: 0.2

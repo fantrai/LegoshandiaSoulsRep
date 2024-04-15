@@ -42,7 +42,10 @@ public abstract class AbstractSkill : MonoBehaviour
     public void NewLvl()
     {
         lvl++;
-        EffectOnNewLvl();
+        if (lvl != 1)
+        {
+            EffectOnNewLvl();
+        }
     }
 
     protected abstract void EffectOnNewLvl();

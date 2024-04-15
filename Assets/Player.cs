@@ -67,18 +67,15 @@ public class Player : AbstractEntity
 
     protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         expSlider.maxValue = expBeforeNextLvl;
         StartCoroutine(Regeneration());
-        for (int i = 0; i < skills.Count; i++)
-        {
-            AddNewSkill(Instantiate(skills[i].gameObject));
-        }
     }
 
     public void AddNewSkill(GameObject skill)
     {
         skill.transform.parent = playerObj.transform;
+        skill.transform.position = transform.position;
         skill.SetActive(true);
         if (skill.TryGetComponent(out AbstractSkill abstSkill))
         {
@@ -117,7 +114,7 @@ public class Player : AbstractEntity
         base.OnTriggerEnter2D(collision);
         if (collision.gameObject.TryGetComponent(out ExpPoint exp))
         {
-            Exp += exp.addExp;
+            Exp += exp.addExp * modAddMana;
             exp.FlyingToPerson(gameObject);
         }
     }

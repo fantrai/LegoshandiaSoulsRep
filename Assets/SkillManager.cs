@@ -15,13 +15,10 @@ public class SkillManager : MonoBehaviour
     {
         for (int i = 0; i < allSkills.Count; i++)
         {
-            if (allSkills[i] == player.skills[0])
-            {
-                allSkills[i] = 
-            }
             allSkills[i] = Instantiate(allSkills[i], transform);
             availableSkills.Add(allSkills[i].GetComponent<AbstractSkill>());
         }
+        player.AddNewSkill(allSkills[0]);
     }
 
     private void OnEnable()
@@ -44,10 +41,8 @@ public class SkillManager : MonoBehaviour
         {
             player.AddNewSkill(availableSkills[skillForChoises[num]].gameObject);
         }
-        else
-        {
-            availableSkills[skillForChoises[num]].NewLvl();
-        }
+        availableSkills[skillForChoises[num]].NewLvl();
+        skillForChoises.Clear();
     }
 
     public void PrintNewSkills()
