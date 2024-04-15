@@ -125,6 +125,6 @@ MonoBehaviour:
   - "+20% \u0443\u0440\u043E\u043D\u0430"
   nameSkill: "\u041B\u0443\u0447 \u0441\u0432\u0435\u0442\u0430"
   rangeAttack: {fileID: 5462337403983522609}
-  ico: {fileID: 0}
+  ico: {fileID: -7761539653054023370, guid: 014cbfa23ce9ee140a26dd3e4ab60cdb, type: 3}
   lightning: {fileID: 685275317892572452, guid: 44fd631eb0e995d4a837a645762f72ba, type: 3}
   countLightningInAttack: 1

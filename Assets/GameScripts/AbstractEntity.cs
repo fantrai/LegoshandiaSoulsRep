@@ -5,7 +5,6 @@ using System.Linq;
 using System.Security.Authentication.ExtendedProtection;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public abstract class AbstractEntity : MonoBehaviour
 {

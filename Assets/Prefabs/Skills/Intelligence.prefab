@@ -57,7 +57,7 @@ MonoBehaviour:
   - "+10% \u0443\u0440\u043E\u043D\u0430"
   nameSkill: "\u0418\u043D\u0442\u0435\u043B\u043B\u0435\u043A\u0442"
   rangeAttack: {fileID: 2113699663412979256}
-  ico: {fileID: 0}
+  ico: {fileID: -3231265155337093903, guid: 014cbfa23ce9ee140a26dd3e4ab60cdb, type: 3}
 --- !u!58 &2113699663412979256
 CircleCollider2D:
   m_ObjectHideFlags: 0

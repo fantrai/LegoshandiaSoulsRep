@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public abstract class AbstractSkill : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public abstract class AbstractSkill : MonoBehaviour
     [SerializeField] string[] descriptionsOnLvls;
     [SerializeField] string nameSkill;
     [SerializeField] protected CircleCollider2D rangeAttack;
-    [SerializeField] Image ico;
+    [SerializeField] Sprite ico;
     protected List<AbstractEntity> enemiesInRangeAttack = new List<AbstractEntity>();
     float baseRangeAttack;
     int lvl = 0;
