@@ -1263,15 +1263,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1471149553}
-  countEnemyPerSecondInWawe: 03000000050000000a000000
+  countEnemyPerSecondInWawe:
+  - 3
+  - 5
+  - 1e-20
   enemyPrefab:
   - {fileID: 3062880300761415128, guid: 88abc975761368f45ba8307a134cddb8, type: 3}
   - {fileID: 3062880300761415128, guid: 88abc975761368f45ba8307a134cddb8, type: 3}
-  - {fileID: 3062880300761415128, guid: 88abc975761368f45ba8307a134cddb8, type: 3}
+  - {fileID: 7145052153015635916, guid: 2240276e4ff22af4d8a5a4f65a9b816c, type: 3}
   timerNewWave:
   - 20
-  - 40
-  - 90000
+  - 100
+  - 300
 --- !u!4 &471782091
 Transform:
   m_ObjectHideFlags: 0
@@ -2918,7 +2921,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3214,6 +3217,30 @@ PrefabInstance:
     - target: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_Name
       value: Floating Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153792821263252, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3660378
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

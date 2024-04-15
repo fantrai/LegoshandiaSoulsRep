@@ -26,7 +26,7 @@ public class AuraOfLightEnergy : AbstractSkill
                 modDamage += 0.3f;
                 break;
             case 4:
-                modSize *= 4;
+                modSize *= 2;
                 break;
             case 5:
                 modDamage += 0.2f;
