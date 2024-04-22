@@ -1,11 +1,21 @@
 # ninja log v5
 21	839	7349162234064827	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	9bbd9d6f7b24ece
+0	2302	7349162248657809	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1424af951917e043
 841	1085	7349162235541494	D:/Unity/UnityProject/LegoshandiaSoulsRep/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/455q3lm1/obj/arm64-v8a/libswappywrapper.so	d3fdd3abd272a021
+6	2115	7349162246787590	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	d98e46e14cfdf2a6
 12	1960	7349162245223124	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	342794e7a402ab45
+4	2140	7349162247037583	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	7a9f5a7185ec37ae
 9	1992	7349162245533203	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	63500f158adddb78
 18	2071	7349162246317828	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	848b03e53c0ce990
-6	2115	7349162246787590	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	d98e46e14cfdf2a6
-4	2140	7349162247037583	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	7a9f5a7185ec37ae
 15	2237	7349162248007859	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	9bb4f5f26d267f21
-0	2302	7349162248657809	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1424af951917e043
 2302	2429	7349162249627711	D:/Unity/UnityProject/LegoshandiaSoulsRep/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/455q3lm1/obj/arm64-v8a/libgame.so	eb4ec0acf18a3c2a
+49	213	7354785947785434	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	9bbd9d6f7b24ece
+213	615	7354785950931143	D:/Unity/UnityProject/LegoshandiaSoulsRep/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/455q3lm1/obj/arm64-v8a/libswappywrapper.so	d3fdd3abd272a021
+39	1767	7354785963147748	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	342794e7a402ab45
+42	1785	7354785963457733	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	63500f158adddb78
+45	1840	7354785964004116	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	848b03e53c0ce990
+27	1932	7354785964924126	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	7a9f5a7185ec37ae
+31	1957	7354785965194115	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	d98e46e14cfdf2a6
+36	2045	7354785966044396	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	9bb4f5f26d267f21
+33	2078	7354785966394277	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1424af951917e043
+2078	2277	7354785967734322	D:/Unity/UnityProject/LegoshandiaSoulsRep/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/455q3lm1/obj/arm64-v8a/libgame.so	eb4ec0acf18a3c2a
