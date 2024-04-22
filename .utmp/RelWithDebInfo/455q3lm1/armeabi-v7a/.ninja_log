@@ -1,0 +1,11 @@
+# ninja log v5
+19	107	7354786003916954	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	be2e3de40634e9aa
+108	283	7354786005247133	D:/Unity/UnityProject/LegoshandiaSoulsRep/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/455q3lm1/obj/armeabi-v7a/libswappywrapper.so	a7d22d8f8125bc6f
+3	600	7354786008778639	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	7444642cf1448d11
+10	634	7354786009147371	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	6e225a25ee85b533
+13	677	7354786009576003	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	4c96c3d9fca974b
+16	688	7354786009676035	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	f14f99e378c0855e
+5	721	7354786010016011	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	c2952fe6940b0ecd
+8	845	7354786011176326	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	9dd770e2479ae338
+0	895	7354786011736922	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	ada4bce11e6bc190
+895	998	7354786012497388	D:/Unity/UnityProject/LegoshandiaSoulsRep/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/455q3lm1/obj/armeabi-v7a/libgame.so	c7d8643b4ed9e7c4

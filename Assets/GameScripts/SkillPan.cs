@@ -10,9 +10,9 @@ public class SkillPan : MonoBehaviour
     [SerializeField] TextMeshProUGUI description;
     [SerializeField] TextMeshProUGUI nameSkillText;
 
-    public void UpdatePan(Image newIco, string newDescription, string nameSkill)
+    public void UpdatePan(Sprite newIco, string newDescription, string nameSkill)
     {
-        ico = newIco;
+        ico.sprite = newIco;
         description.text = newDescription;
         nameSkillText.text = nameSkill;
     }

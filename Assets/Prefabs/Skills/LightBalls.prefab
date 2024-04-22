@@ -124,7 +124,7 @@ MonoBehaviour:
   - "+20% \u0443\u0440\u043E\u043D\u0430"
   nameSkill: "\u041F\u0440\u043E\u0431\u043B\u0435\u0441\u043A\u0438 \u0441\u0432\u0435\u0442\u0430"
   rangeAttack: {fileID: 6263700139417975638}
-  ico: {fileID: 0}
+  ico: {fileID: -26329759613171845, guid: 014cbfa23ce9ee140a26dd3e4ab60cdb, type: 3}
   lightBallPrefab: {fileID: 8036245976295605412, guid: a6a288cd12b70be49a3bc10f5915aebb, type: 3}
   piercing: 0
   countBallInAttack: 1
